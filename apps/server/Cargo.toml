@@ -1,0 +1,16 @@
+[package]
+name = "createcraft-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+createcraft-config.workspace = true
+createcraft-game-core.workspace = true
+createcraft-networking.workspace = true
+createcraft-protocol.workspace = true
+createcraft-world.workspace = true
+
+[lints]
+workspace = true

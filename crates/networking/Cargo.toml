@@ -1,0 +1,12 @@
+[package]
+name = "createcraft-networking"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+createcraft-protocol.workspace = true
+
+[lints]
+workspace = true

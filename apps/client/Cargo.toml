@@ -1,0 +1,18 @@
+[package]
+name = "createcraft-client"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+createcraft-game-core.workspace = true
+createcraft-protocol.workspace = true
+createcraft-rendering.workspace = true
+createcraft-networking.workspace = true
+createcraft-assets.workspace = true
+createcraft-input.workspace = true
+createcraft-config.workspace = true
+
+[lints]
+workspace = true

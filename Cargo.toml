@@ -1,0 +1,47 @@
+
+[workspace]
+resolver = "3"
+
+members = [
+    "apps/*",
+    "crates/*",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# thiserror = "2"
+# anyhow = "1"
+# tracing = "0.1"
+# tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+createcraft-assets = { path = "crates/assets" }
+createcraft-config = { path = "crates/config" }
+createcraft-game-core = { path = "crates/game-core" }
+createcraft-input = { path = "crates/input" }
+createcraft-networking = { path = "crates/networking" }
+createcraft-physics = { path = "crates/physics" }
+createcraft-protocol = { path = "crates/protocol" }
+createcraft-rendering = { path = "crates/rendering" }
+createcraft-world = { path = "crates/world" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"
+
+[profile.dev]
+opt-level = 0
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
